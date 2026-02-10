@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>San Valentín para Cami 💖</title>
+
+<style>
+  body {
+    background-color: #ffe6f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #d1005f;
+    text-align: center;
+  }
+
+  .heart {
+    font-size: 50px;
+    line-height: 0.8;
+    animation: beat 1s infinite;
+  }
+
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+
+  .message {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+
+  .galeria {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .galeria img {
+    width: 180px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+    animation: flotar 3s ease-in-out infinite;
+  }
+
+  .galeria img:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+
+  .galeria img:nth-child(3) {
+    animation-delay: 1s;
+  }
+
+  .galeria img:nth-child(4) {
+    animation-delay: 1.5s;
+  }
+
+  @keyframes flotar {
+    0% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-15px) scale(1.05); }
+    100% { transform: translateY(0px) scale(1); }
+  }
+
+  .buttons {
+    margin-top: 30px;
+  }
+
+  button {
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background-color: #ff3385;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="heart">
+  ❤️💖❤️<br>
+  💖❤️💖<br>
+  ❤️💖❤️
+</div>
+
+<div class="message">
+  HOLA CAMI 💖<br>
+  ¿QUIERES SER MI VALENTÍN? 💌
+</div>
+
+<div class="galeria">
+  <img src="foto1.jpg">
+  <img src="foto2.jpg">
+  <img src="foto3.jpg">
+  <img src="foto4.jpg">
+</div>
+
+<div class="buttons">
+  <button onclick="respuesta('sí')">Sí</button>
+  <button onclick="respuesta('no')">No</button>
+</div>
+
+<script>
+  function respuesta(eleccion) {
+    if (eleccion === 'sí') {
+      alert("💖 Te amo mucho, Camilita 💖");
+    } else {
+      alert("😢 Pipipi… 😢");
+    }
+  }
+</script>
+
+</body>
+</html>
